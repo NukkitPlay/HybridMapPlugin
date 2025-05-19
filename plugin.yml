@@ -1,0 +1,31 @@
+name: HybridMapPlugin
+version: 1.0.0
+main: cn.nukkit.plugin.HybridMapPlugin
+api: [1.13.0]
+authors: [YourName]
+description: A hybrid map plugin for Nukkit server that provides players with interactive map features, teleportation capabilities, and performance monitoring.
+depend: []
+soft-depend: []
+commands:
+  map:
+    description: Toggles the full-screen map display for the player.
+    usage: /map
+    permission: hybridmap.use
+  teleport:
+    description: Requests a teleportation to the specified location.
+    usage: /teleport <x> <y> <z>
+    permission: hybridmap.teleport.use
+  performance:
+    description: Displays current server performance metrics.
+    usage: /performance
+    permission: hybridmap.performance.view
+permissions:
+  hybridmap.use:
+    description: Allows the player to use the hybrid map plugin's basic features, including toggling the map display.
+    default: true
+  hybridmap.teleport.use:
+    description: Allows the player to use the teleportation command.
+    default: op
+  hybridmap.performance.view:
+    description: Allows the player to view server performance metrics.
+    default: op
